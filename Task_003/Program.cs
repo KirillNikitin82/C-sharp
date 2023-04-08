@@ -9,31 +9,31 @@ if (num == 1)
 {
     Console.WriteLine("Понедельник");
 }
-if (num == 2)
+else if (num == 2)
 {
     Console.WriteLine("Вторник");
 }
-if (num == 3)
+else if (num == 3)
 {
     Console.WriteLine("Среда");
 }
-if (num == 4)
+else if (num == 4)
 {
     Console.WriteLine("Четверг");
 }
-if (num == 5)
+else if (num == 5)
 {
     Console.WriteLine("Пятница");
 }
-if (num == 6)
+else if (num == 6)
 {
     Console.WriteLine("Суббота");
 }
-if (num == 7)
+else if (num == 7)
 {
     Console.WriteLine("Воскресение");
 }
-else if ((num > 7)|(num < 1))
+else 
 {
     Console.WriteLine("Нет такого дня недели");
 }
