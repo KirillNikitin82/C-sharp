@@ -8,5 +8,5 @@ while (count <= num)
 {
     if (count % 2 == 0)
         Console.Write(count + " ");
-    else count++;
+    count++;
 }
