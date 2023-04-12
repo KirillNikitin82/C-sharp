@@ -4,7 +4,7 @@
 // 14 -> нет
 // 46 -> нет
 // 161 -> да
-iConsole.Write("Введите число: ");
+Console.Write("Введите число: ");
 int number = Convert.ToInt32(Console.ReadLine());
 
 bool result = MultipleTwoDigits(number,7,23);
