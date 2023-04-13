@@ -3,4 +3,19 @@
 // 6 -> да
 // 7 -> да
 // 1 -> нет
-Console.WriteLine("Hello, World!");
+Console.Write("Введите цифру, обозначающую день недели: ");
+int number = Convert.ToInt32(Console.ReadLine());
+// if (number < 1 && number > 7);
+// Console.Write ("Нет такого дня недели");
+// не понял как добавить значения выхода из диапазона. Внутри метода не работает 
+// пробовал еще одну переменную ввести проблемы с bool, отдельно работает но криво
+
+bool result = NumberDay(number);
+Console.WriteLine(result ? "да" : "нет");
+
+bool NumberDay(int num)
+{
+    // num < 1 && num > 7 ? "нет такого дня недели":"";
+    return num >= 6 && num <= 7;
+}
+// условие достигнуто, но есть проблемы
