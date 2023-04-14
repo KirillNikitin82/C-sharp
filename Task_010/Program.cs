@@ -3,16 +3,23 @@
 // 456 -> 5
 // 782 -> 8
 // 918 -> 1
+
+int MidleDigit(int num)
+{
+    return num % 100 / 10;
+}
+
 Console.WriteLine("Введите трёхзначное число:");
 int number = Convert.ToInt32(Console.ReadLine());
 
-// if (number < 0)
-// number = -number;
-int num = number < 0 ? number = -number : 1; //работает любая цифра после двоеточия, без цифры не работает
+if (number < 0) number = -number;
 
 if (number >= 100 && number <= 999)
-    Console.WriteLine($"Вторая цифра ->  {number % 100 / 10}");
+{
+    int result = MidleDigit(number);
+    Console.WriteLine($"Вторая цифра ->  {result}");
+}
 else
-    Console.WriteLine("Вы ввели нетрёхзначное число");
-// string res = (number >= 100 || number <= 999) ?  $"Вторая цифра ->  {number % 100 / 10}" : "Вы ввели нетрёхзначное число";
-// строка 17 запись не работает не понял почему
+{
+   Console.WriteLine("Вы ввели нетрёхзначное число"); 
+}

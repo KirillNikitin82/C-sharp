@@ -3,10 +3,29 @@
 // 645 -> 5
 // 78 -> третьей цифры нет
 // 32679 -> 6
+int ThirdDigit(int num)
+{
+    int count = num;
+    while (num > 999)
+    {
+        num = num / 10;
+        count++;
+    }
+    return num % 10;
+}
+
 Console.Write("Введите любое число: ");
 int number = Convert.ToInt32(Console.ReadLine());
-int count = -number;
-while (count >= 100)
-    number = number / 10;
-    count ++;
-Console.Write($"Третья цифра вашего числа: {number}");
+
+// if (number>=100)
+// {
+//     int result = ThirdDigit(number);
+//     Console.WriteLine($"Третья цифра: {result}");
+// }
+// else 
+// {
+//     Console.WriteLine("Третьей цифры нет!");
+// }
+
+string res = (number >= 100) ? $"Третья цифра: {ThirdDigit(number)}" : "Третьей цифры нет!";
+Console.Write(res);
