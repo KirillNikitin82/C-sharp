@@ -4,9 +4,9 @@
 void TableAllSquares(int num)
 {
     int index = 1;
-    while(index < num)
+    while(index <= num)
     {
-        System.Console.WriteLine($"{index} {index*index}");
+        System.Console.WriteLine($"{index, 3} {index*index, 5}"); //форматирование на количесво мест под результат
         index ++;
     }
 }
