@@ -6,18 +6,25 @@
 // 12821 -> да
 // 23432 -> да
 
-Console.WriteLine("Введите целое положительное число: ");
+Console.WriteLine("Введите число: ");
 int number = Convert.ToInt32(Console.ReadLine());
 
 int turnDigit = TurnDigit(number);
-System.Console.WriteLine($"Сумма чисел от 1 до {number} = {turnDigit}");
+bool result = Palindrome(turnDigit,number);
+Console.WriteLine(result ? "да" : "нет");
 
 int TurnDigit(int num)
 {
     int sum = 0;
-    for (int i = 10; i > 0; i = i * 10)
+    while (num > 0)
     {
-        int res = sum / i % 10;
+        sum = sum * 10 + num % 10;
+        num = num/10;
     }
-    return sum;
+return sum;
+}
+
+bool Palindrome(int turnDigit1, int num)
+{
+return turnDigit1 == num;
 }
