@@ -9,6 +9,11 @@
 Console.WriteLine("Введите число: ");
 int number = Convert.ToInt32(Console.ReadLine());
 
+if (number < 0)
+{
+    number = - number;
+}
+
 int turnDigit = TurnDigit(number);
 bool result = Palindrome(turnDigit,number);
 Console.WriteLine(result ? "да" : "нет");
