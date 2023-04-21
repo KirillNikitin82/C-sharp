@@ -1,50 +1,50 @@
-﻿// Задача 25: Напишите цикл, который принимает на вход два числа (A и B) 
+﻿// Задача 25: Напишите цикл, который принимает на вход два числа (A и B)
 // и возводит число A в натуральную степень B.
 // 3, 5 -> 243 (3⁵)
 // 2, 4 -> 16
 
-Console.WriteLine("Введите число A: ");
+Console.WriteLine("Введите число А: ");
 int numberA = Convert.ToInt32(Console.ReadLine());
 
-Console.WriteLine("Введите число B: ");
+Console.WriteLine("Введите число В: ");
 int numberB = Convert.ToInt32(Console.ReadLine());
 
-// int[] array = Exponent( numberA, numberB, array);
-int[] arr = new int[numberB];
-
-// int[] arr1 = PrintArray(arr[], numberB, numberA);
-// System.Console.WriteLine();
-
-
-// int[] CreateArray(int numB, int numA)
-// {
-//     int[] array = new int[numB];
-//     for (int i = 0; i <= numB; i++)
-//     {
-//         array[i] = numA;
-//     }
-//     return array;
-// }
-
-int PrintArray(int[] array, int numB, int numA)
+if (numberB < 0)
 {
-    int i = 0;
-    while (i < numB)
-    {
-        array[i] = numA;
-        Console.Write($"{array[i]} ");
-    }
-    return array[i];
+    System.Console.WriteLine("Ошибка ввода данных");
+}
+else
+{
+    int[] arr = CreateArray(numberA, numberB);
+    int result = Exponent(arr, numberB);
+    Console.WriteLine($"{numberA} ^{numberB} ->{result}");
+    // PrintArray(arr);
 }
 
-// int Exponent(int numA, int numB, int[] arr)
+int Exponent(int[] array, int numB)
+{
+    int res = 1;
+for (int i = 0; i < numB; i++)
+    {
+        res = res * array[i];
+    }
+    return res;
+}
+
+int[] CreateArray(int numA, int numB)
+{
+    int[] array = new int[numB];
+    for (int i = 0; i < array.Length; i++)
+    {
+        array[i] = numA;
+    }
+    return array;
+}
+
+// void PrintArray(int[] array)
 // {
-//     int sum = 0;
-//     int count = 0;
-//     while (count <= numB)
+//     for (int i = 0; i < array.Length; i++)
 //     {
-//         sum = numA * arr[count];
-//         count++;
+//         Console.Write($"{array[i]} ");
 //     }
-//     return sum;
 // }
