@@ -7,18 +7,19 @@
 Console.WriteLine("Введите число: ");
 int number = Convert.ToInt32(Console.ReadLine());
 
-int Convert10to2Int(int num)
-{
-   int result = 0;
-   int i = 1;
-   while (num > 0)
-   {
-      result += (num % 2) * i;
-      num /= 2;
-      i *= 10;
-   }
-   return result;
-}
+// int Convert10to2Int(int num)
+// {
+//    int result = 0;
+//    int i = 1;
+//    while (num > 0)
+//    {
+//       result += (num % 2) * i;
+//       num /= 2;
+//       i *= 10;
+//    }
+//    return result;
+// }
+
 string Convert10to2String(int num)
 {
    string result = string.Empty;
