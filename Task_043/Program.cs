@@ -5,32 +5,54 @@
 // b1 = 2, k1 = 5, b2 = 4, k2 = 9 -> (-0,5; -0,5)
 
 Console.WriteLine("Задаем первую прямую y = k1 * x + b1, введите b1:");
-int b1 = Convert.ToInt32(Console.ReadLine());
+double b1 = Convert.ToDouble(Console.ReadLine());
 Console.WriteLine("Задаем первую прямую y = k1 * x + b1, введите k1:");
-int k1 = Convert.ToInt32(Console.ReadLine());
+double k1 = Convert.ToDouble(Console.ReadLine());
 Console.WriteLine("Задаем вторую прямую y = k2 * x + b2, введите b2:");
-int b2 = Convert.ToInt32(Console.ReadLine());
+double b2 = Convert.ToDouble(Console.ReadLine());
 Console.WriteLine("Задаем вторую прямую y = k2 * x + b2, введите k2:");
-int k2 = Convert.ToInt32(Console.ReadLine());
+double k2 = Convert.ToDouble(Console.ReadLine());
 
-// double CrossPoint(int b11, int k11, int b22, int k22)
+if (k1 == k2)
 {
-    // double x = 0;
-    // double y = 0;
-    // int x2 = 0;
-    // int y2 = 0;
-    // for (y1=y2 || x1=x2)
-    // {
+    Console.WriteLine("Прямые параллельны или равнозначны");
+}
+else
+// {
+//     double x = (b1 - b2) / (k2 - k1);
+//     double y = k2 * (b1 - b2) / (k2 - k1) + b2;
+//     double xRound = Math.Round(x, 2);
+//     double yRound = Math.Round(y, 2);
+//     Console.WriteLine($"Точка пересечения имеет координаты [{xRound};{yRound}]");
+// }
+// {
+//     double[] crossPoint = CrossPoint(b1, k1, b2, k2);
+//     Console.WriteLine($"[ {crossPoint} ]");
+// }
+// double CrossPoint(double b11, double k11, double b22, double k22)
+// {
+//     double[] arr = new double[2];
+//     {
+//     arr[0] = (b11 - b22) / (k22 - k11);
+//     arr[1] = k22 * (b11 - b22) / (k22 - k11) + b22;
+//     }
+//     return arr;
+// }
+{
+    double crossPointX = CrossPointX(b1, k1, b2, k2);
+    double crossPointY = CrossPointY(b1, k1, b2, k2);
+    double crossPointXRound = Math.Round(crossPointX, 2);
+    double crossPointYRound = Math.Round(crossPointY, 2);
 
-    // }
-
-    // y = k1 * x + b1 + k2 * x + b2;
-    // x = 
-
-
+    Console.WriteLine($"[ {crossPointXRound}; {crossPointYRound} ]");
 }
 
-double X = (b1-b2)/(k2-k1);
-double Y = k2*(b1-b2)/(k2-k1)+b2;
+double CrossPointX(double b11, double k11, double b22, double k22)
+{
+    return (b11 - b22) / (k22 - k11);
+}
 
-Console.WriteLine($"Точка пересечения имеет координаты [{X};{Y}]");
+double CrossPointY(double b11, double k11, double b22, double k22)
+{
+    return k22 * (b11 - b22) / (k22 - k11) + b22;
+}
