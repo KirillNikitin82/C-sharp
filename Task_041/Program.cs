@@ -24,7 +24,6 @@ int PositiveElements(int[] array)
     return count;
 }
 
-
 void CreateArray(int[]array, int numA)
 {
         for (int i = 0; i < array.Length; i++)
@@ -41,4 +40,3 @@ void PrintArray(int[] array)
         Console.Write($"{array[i]} ");
     }
 }
-

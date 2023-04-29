@@ -15,17 +15,17 @@ System.Console.WriteLine($"  {resultRound}");
 
 double DefferenceMaxMin(double[] arr)
 {
-double max = arr[0];
-double min = arr[0];
-for (int i = 1; i < arr.Length; i++)
-{
+    double max = arr[0];
+    double min = arr[0];
+    for (int i = 1; i < arr.Length; i++)
+    {
         if (max < arr[i])
-        max = arr[i];
-        if (min>arr[i])
-        min = arr[i];
-}
-double result = max - min;
-return result;
+            max = arr[i];
+        if (min > arr[i])
+            min = arr[i];
+    }
+    double result = max - min;
+    return result;
 }
 
 double[] CreateArrayRndDouble(int size, int min, int max)
