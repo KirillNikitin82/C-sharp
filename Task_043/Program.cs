@@ -21,7 +21,7 @@ if (k1 == k2 && b1==b2)
 
 if (k1 == k2)
 {
-    Console.WriteLine("Прямые параллельны или равнозначны");
+    Console.WriteLine("Прямые параллельны");
 }
 else
 // {
