@@ -12,7 +12,7 @@ int numberJ = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine("Введите глубину массива");
 int numberD = Convert.ToInt32(Console.ReadLine());
 
-if (numberI * numberJ * numberD >= 100 || numberI <= 0 || numberJ <= 0 || numberD <= 0)
+if (numberI * numberJ * numberD >= 90 || numberI <= 0 || numberJ <= 0 || numberD <= 0)
 {
     Console.WriteLine("Невозможно заполнить матрицу согласно условию");
     return;
